@@ -2,12 +2,11 @@
   "name": "income-calculator",
   "productName": "IncomeCalculator",
   "version": "1.0.0",
+  "description": "A simple income calculator with deduction and conversion features.",
   "author": "Feiton Ng",
   "main": "src/main.js",
-  "scripts": {
-    "start": "electron-forge start",
-    "make": "electron-forge make"
-  },
+  ...
+},
   "devDependencies": {
     "electron": "^27.1.1",
     "@electron-forge/cli": "^6.4.1",
