@@ -54,12 +54,49 @@
   <div class="result" id="output"></div>
 
   <script>
+    window.onload = function() {
+      if (localStorage.getItem('saveFleet') === 'true') {
+        document.getElementById('fleet').value = localStorage.getItem('fleet') || '';
+        document.getElementById('saveFleet').checked = true;
+      }
+      if (localStorage.getItem('saveShare') === 'true') {
+        document.getElementById('share').value = localStorage.getItem('share') || '';
+        document.getElementById('saveShare').checked = true;
+      }
+      if (localStorage.getItem('saveRate') === 'true') {
+        document.getElementById('rate').value = localStorage.getItem('rate') || '';
+        document.getElementById('saveRate').checked = true;
+      }
+    }
+
     function calculate() {
       const customerName = document.getElementById("customerName").value.trim();
       const gross = parseFloat(document.getElementById("gross").value);
       const fleetRate = parseFloat(document.getElementById("fleet").value) / 100;
       const shareRate = parseFloat(document.getElementById("share").value) / 100;
       const rate = parseFloat(document.getElementById("rate").value);
+
+      if (document.getElementById("saveFleet").checked) {
+        localStorage.setItem('fleet', document.getElementById("fleet").value);
+        localStorage.setItem('saveFleet', 'true');
+      } else {
+        localStorage.removeItem('fleet');
+        localStorage.setItem('saveFleet', 'false');
+      }
+      if (document.getElementById("saveShare").checked) {
+        localStorage.setItem('share', document.getElementById("share").value);
+        localStorage.setItem('saveShare', 'true');
+      } else {
+        localStorage.removeItem('share');
+        localStorage.setItem('saveShare', 'false');
+      }
+      if (document.getElementById("saveRate").checked) {
+        localStorage.setItem('rate', document.getElementById("rate").value);
+        localStorage.setItem('saveRate', 'true');
+      } else {
+        localStorage.removeItem('rate');
+        localStorage.setItem('saveRate', 'false');
+      }
 
       const fleetFee = gross * fleetRate;
       const net = gross - fleetFee;
