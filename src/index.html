@@ -1,10 +1,1 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-  <meta charset="UTF-8">
-  <title>入金计算机</title>
-</head>
-<body>
-  <h2>入金计算机</h2>
-</body>
-</html>
+<!DOCTYPE html><html lang='zh'><head><meta charset='UTF-8'><title>入金计算机</title></head><body><h2>入金计算机</h2><label>客户姓名:<input type='text' id='customerName' placeholder='请输入客户姓名'></label><label>入金额度 (RM):<input type='number' id='gross' value='6000'></label><label>车队费用百分比 (%):<input type='number' id='fleet' value='15'></label><label>提取比例 (%):<input type='number' id='share' value='17'></label><label>汇率 (RM / USD):<input type='number' step='0.01' id='rate' value='4.6'></label><button onclick='calculate()'>计算</button><div class='result' id='output' style='margin-top:20px; font-weight:bold;'></div><script>function calculate(){const e=document.getElementById('customerName').value.trim(),t=parseFloat(document.getElementById('gross').value),a=parseFloat(document.getElementById('fleet').value)/100,n=parseFloat(document.getElementById('share').value)/100,r=parseFloat(document.getElementById('rate').value),l=t*a,c=t-l,o=c*n,u=o/r;document.getElementById('output').innerHTML=(e?`客户姓名: ${e}<br>`:'')+`入金额度: RM ${t.toFixed(2)}<br>`+`扣除15%车队: RM ${c.toFixed(2)}<br>`+`提取17%净收入: RM ${o.toFixed(2)}<br>`+`折合美金: USD ${u.toFixed(2)}`}</script></body></html>
