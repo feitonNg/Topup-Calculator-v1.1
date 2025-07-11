@@ -1,0 +1,32 @@
+{
+  "name": "income-calculator",
+  "productName": "IncomeCalculator",
+  "version": "1.0.0",
+  "author": "Feiton Ng",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "make": "electron-forge make"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-forge": "^6.0.0-beta.61"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "icon"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": ["win32"]
+        }
+      ]
+    }
+  }
+}
