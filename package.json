@@ -2,16 +2,19 @@
   "name": "income-calculator",
   "productName": "IncomeCalculator",
   "version": "1.0.0",
-  "description": "A simple income calculator with deduction and conversion features.",
   "author": "Feiton Ng",
+  "description": "入金计算机 - Electron",
   "main": "src/main.js",
-  ...
-},
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
   "devDependencies": {
-    "electron": "^27.1.1",
-    "@electron-forge/cli": "^6.4.1",
-    "@electron-forge/maker-squirrel": "^6.4.1",
-    "@electron-forge/maker-zip": "^6.4.1"
+    "@electron-forge/cli": "^6.0.0-beta.61",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
+    "@electron-forge/maker-zip": "^6.0.0-beta.61",
+    "electron": "^29.0.0"
   },
   "config": {
     "forge": {
@@ -25,7 +28,9 @@
         },
         {
           "name": "@electron-forge/maker-zip",
-          "platforms": ["win32"]
+          "platforms": [
+            "win32"
+          ]
         }
       ]
     }
