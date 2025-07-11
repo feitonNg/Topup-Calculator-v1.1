@@ -5,12 +5,12 @@
   "author": "Feiton Ng",
   "main": "src/main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron-forge start",
     "make": "electron-forge make"
   },
   "devDependencies": {
-    "electron": "^27.0.0",
-    "electron-forge": "^6.0.0-beta.61"
+    "electron": "^27.1.1",
+    "@electron-forge/cli": "^6.5.2"
   },
   "config": {
     "forge": {
