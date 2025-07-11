@@ -9,6 +9,12 @@
     "make": "electron-forge make"
   },
   "devDependencies": {
+    "devDependencies": {
+  "electron": "^27.1.1",
+  "@electron-forge/cli": "^6.4.1",
+  "@electron-forge/maker-squirrel": "^6.4.1",
+  "@electron-forge/maker-zip": "^6.4.1"
+}
     "electron": "^27.1.1",
     "@electron-forge/cli": "^6.4.1"
   },
